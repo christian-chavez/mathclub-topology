@@ -1,0 +1,86 @@
+\documentclass[b5paper,10pt,twoside]{book}
+\input{./preamble.tex}
+
+\begin{document}
+\def\thetitle{Tarea 01}
+\input{title.tex}
+
+
+\section*{1.\enspace Espacios topológicos}
+
+
+\begin{problem}
+Sea $X$ un conjunto infinito y $p \in X$. Muestra que
+\begin{align*}
+\mathcal{T}_1 &= \{ A \subseteq X \mid A = \varnothing \, \text{ o } \, X \setminus A \text{ es finito} \}\quad\text{y}\\
+\mathcal{T}_2 &= \{ A \subseteq X \mid A = \varnothing \, \text{ o } \, p \in A \}
+\end{align*}
+son topologías sobre $X$.
+
+\end{problem}
+
+
+
+\begin{problem}\hfill\null
+\begin{enumerate}[label=(\roman*)]
+\item Sea $X = \{a, b, c, d\}$ dotado de la topología
+\[
+\mathcal{T} = \{\varnothing, X, \{a\}, \{b\}, \{a, c\}, \{a, b\}, \{a, b, c\}\}.
+\]
+Encuentra una base y una subbase para $\mathcal{T}$.
+
+\item ¿Por qué una topología es una base para ella misma?
+
+\item Muestra que \(\mathcal{B}  = \{(a, b) \subseteq \mathbb{R} \mid a, b \in \mathbb{Q}\}\)  
+es una  base en $\mathbb{R}$ y que además $\mathcal{T}_{\mathcal{B}} = \mathcal{T}_{\text{usual}}$. (Ayuda: usa el hecho de que todo real es el límite de una secuencia de racionales.)
+\end{enumerate}
+
+
+\end{problem}
+ 
+
+% \begin{problem}
+%     % Muestra que la topología generada por una base es única.
+% \end{problem}
+
+
+
+\section*{2.\enspace Espacios métricos}
+
+
+\begin{problem}
+Sea $d$ una métrica en un conjunto $X$.
+
+\begin{enumerate}[label=(\roman*)]
+\item Muestra que la función ${D} : X \times X \to [0, +\infty)$ definida por 
+\[
+(x, y) \mapsto \frac{d(x, y)}{1 + d(x, y)}
+\]
+es una métrica en $X$.
+
+\item Muestra que $d$ y ${D}$ son equivalentes.
+
+\item Muestra que 
+\[
+\rho : X \times X \to [0, +\infty) \; : \;  (x, y) \mapsto \min\{1, d(x, y)\}
+\]
+es una métrica en $X$.
+
+\item Supón que $f : [0, +\infty) \to [0, +\infty)$ es una función monótona creciente tal que $f(0) = 0$ y 
+\[
+f(x + y) \leq f(x) + f(y)
+\]
+para todo \(x,y\geq 0\).
+Muestra que $f \circ d$ es una métrica en $X$.
+\end{enumerate}
+    
+\end{problem}
+
+
+
+\section*{3.\enspace Posición de un punto respecto  a un conjunto}
+
+
+
+\end{document}
+
