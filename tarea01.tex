@@ -2,83 +2,138 @@
 \input{./preamble.tex}
 
 \begin{document}
-\def\thetitle{Tarea 01}
+\def\thetitle{Tarea 01 -- Parte 2}
 \input{title.tex}
 
 
-\section*{1.\enspace Espacios topológicos}
+% \section*{1.\enspace Espacios topológicos}
 
-
-\begin{problem}
-Sea $X$ un conjunto infinito y $p \in X$. Muestra que
-\begin{align*}
-\mathcal{T}_1 &= \{ A \subseteq X \mid A = \varnothing \, \text{ o } \, X \setminus A \text{ es finito} \}\quad\text{y}\\
-\mathcal{T}_2 &= \{ A \subseteq X \mid A = \varnothing \, \text{ o } \, p \in A \}
-\end{align*}
-son topologías sobre $X$.
-
-\end{problem}
-
-
-
-\begin{problem}\hfill\null
-\begin{enumerate}[label=(\roman*)]
-\item Sea $X = \{a, b, c, d\}$ dotado de la topología
-\[
-\mathcal{T} = \{\varnothing, X, \{a\}, \{b\}, \{a, c\}, \{a, b\}, \{a, b, c\}\}.
-\]
-Encuentra una base y una subbase para $\mathcal{T}$.
-
-\item ¿Por qué una topología es una base para ella misma?
-
-\item Muestra que \(\mathcal{B}  = \{(a, b) \subseteq \mathbb{R} \mid a, b \in \mathbb{Q}\}\)  
-es una  base en $\mathbb{R}$ y que además $\mathcal{T}_{\mathcal{B}} = \mathcal{T}_{\text{usual}}$. (Ayuda: usa el hecho de que todo real es el límite de una secuencia de racionales.)
-\end{enumerate}
-
-
-\end{problem}
- 
 
 % \begin{problem}
-%     % Muestra que la topología generada por una base es única.
+% Sea $X$ un conjunto infinito y $p \in X$. Muestra que
+% \begin{align*}
+% \mathcal{T}_1 &= \{ A \subseteq X \mid A = \varnothing \, \text{ o } \, X \setminus A \text{ es finito} \}\quad\text{y}\\
+% \mathcal{T}_2 &= \{ A \subseteq X \mid A = \varnothing \, \text{ o } \, p \in A \}
+% \end{align*}
+% son topologías sobre $X$.
+
 % \end{problem}
 
 
 
-\section*{2.\enspace Espacios métricos}
+% \begin{problem}\hfill\null
+% \begin{enumerate}[label=(\roman*)]
+% \item Sea $X = \{a, b, c, d\}$ dotado de la topología
+% \[
+% \mathcal{T} = \{\varnothing, X, \{a\}, \{b\}, \{a, c\}, \{a, b\}, \{a, b, c\}\}.
+% \]
+% Encuentra una base y una subbase para $\mathcal{T}$.
+
+% \item ¿Por qué una topología es una base para ella misma?
+
+% \item Muestra que \(\mathcal{B}  = \{(a, b) \subseteq \mathbb{R} \mid a, b \in \mathbb{Q}\}\)  
+% es una  base en $\mathbb{R}$ y que además $\mathcal{T}_{\mathcal{B}} = \mathcal{T}_{\text{usual}}$. (Ayuda: usa el hecho de que todo real es el límite de una secuencia de racionales.)
+% \end{enumerate}
+
+
+% \end{problem}
+ 
+
+% % \begin{problem}
+% %     % Muestra que la topología generada por una base es única.
+% % \end{problem}
+
+
+
+% \section*{2.\enspace Espacios métricos}
+
+% \begin{problem}
+% \begin{enumerate}[label=(\roman*)]
+% \item Muestra que la suma/el máximo de métricas es una métrica. En otras palabras, si \(d\) y \(\rho\) son métricas sobre un conjunto \(M\), entonces \(d+\rho\) definida por \((d+\rho)(x,y) = d(x,y) + \rho(x,y)\) es una métrica sobre \(M\). Similarmente, \(\xi(x,y) = \max\left\{ d(x,y) , \rho(x,y) \right\}\) es una métrica sobre \(M\). 
+
+% \item Muestra que las siguientes funciones son métricas en $\mathbb{R}^n$.
+% \begin{enumerate}[label=(\alph*)]
+%     \item $d(x, y) = \max\{|x_i - y_i| : 1 \leq i \leq n\}$.
+%     \item $\rho(x, y) = |x_1 - y_1| + \cdots + |x_n - y_n|$.
+% \end{enumerate}
+% \end{enumerate}
+% \end{problem}
+
+
+% \begin{problem}
+% Sea $d$ una métrica en un conjunto $X$.
+
+% \begin{enumerate}[label=(\roman*)]
+% \item Muestra que la función ${D} : X \times X \to [0, +\infty)$ definida por 
+% \[
+% (x, y) \mapsto \frac{d(x, y)}{1 + d(x, y)}
+% \]
+% es una métrica en $X$.
+
+% \item Muestra que $d$ y ${D}$ son equivalentes.
+ 
+% \item Muestra que 
+% \[
+% \rho : X \times X \to [0, +\infty) \; : \;  (x, y) \mapsto \min\{1, d(x, y)\}
+% \]
+% es una métrica en $X$.
+
+% \item Supón que $f : [0, +\infty) \to [0, +\infty)$ es una función monótona creciente tal que $f(0) = 0$ y 
+% \[
+% f(x + y) \leq f(x) + f(y)
+% \]
+% para todo \(x,y\geq 0\).
+% Muestra que $f \circ d$ es una métrica en $X$.
+% \end{enumerate}
+    
+% \end{problem}
+
+\section*{3.\enspace Posición de un punto respecto  a un conjunto}
 
 
 \begin{problem}
-Sea $d$ una métrica en un conjunto $X$.
+    Sea \(A\)  un subconjunto  de un espacio topológico \(X\).
+    Verifica que \(A^\circ \subset A\) y \(A\subset \overline{A}\).
+    Muestra que \((A^\circ)^\circ = A^\circ\) y \(\overline{\overline{A}} = \overline{A}\). 
 
-\begin{enumerate}[label=(\roman*)]
-\item Muestra que la función ${D} : X \times X \to [0, +\infty)$ definida por 
-\[
-(x, y) \mapsto \frac{d(x, y)}{1 + d(x, y)}
-\]
-es una métrica en $X$.
-
-\item Muestra que $d$ y ${D}$ son equivalentes.
-
-\item Muestra que 
-\[
-\rho : X \times X \to [0, +\infty) \; : \;  (x, y) \mapsto \min\{1, d(x, y)\}
-\]
-es una métrica en $X$.
-
-\item Supón que $f : [0, +\infty) \to [0, +\infty)$ es una función monótona creciente tal que $f(0) = 0$ y 
-\[
-f(x + y) \leq f(x) + f(y)
-\]
-para todo \(x,y\geq 0\).
-Muestra que $f \circ d$ es una métrica en $X$.
-\end{enumerate}
-    
 \end{problem}
 
 
+\begin{problem}
+    Sean \(A\) y \(B\) un subconjuntos de un espacio topológico.
+    Demuestra que 
+    \begin{enumerate}[label=(\roman*)]
+        \item si \(A\subset B\), entonces \(A^\circ \subset B^\circ\),
+        \item si \(A\subset B\), entonces \(\text{Ext}\, {B} \subset \text{Ext}\, {A}\),
+        \item si \(A\subset B\), entonces \(\overline{A} \subset \overline{B}\),
+        \item \((A\cap B)^\circ  = A^\circ \cap B^\circ \) y \(\overline{A\cup B}=\overline{A}\cup \overline{B}\).
+    \end{enumerate}
+\end{problem}
+    
 
-\section*{3.\enspace Posición de un punto respecto  a un conjunto}
+\begin{problem}
+Sea \(A\) un subconjunto de un espacio topológico.
+Demuestra que 
+\begin{enumerate}[label=(\roman*)]
+    \item \(A\) es abierto si y solo si \(A = A^\circ\),
+    \item \(A\) es cerrado si y solo si \(A = \overline{A}\),
+    \item \(A\) es cerrado si y solo si \(\partial A \subset  {A}\),
+    \item \(A\) es cerrado si y solo si \( A' \subset  {A}\).
+\end{enumerate}
+\end{problem}
+
+
+\begin{problem} 
+    Sean \(A\) y \(B\) un subconjuntos de un espacio topológico.
+\begin{enumerate}[label=(\roman*)]
+    \item Demuestra que \(\partial A = \partial (X\setminus A)\).
+    \item Demuestra que \(\partial A = \overline{A}\cap \overline{X\setminus A}   \).
+    \item Encuentra contraejemplos para \((A\cup  B)^\circ  = A^\circ \cup  B^\circ \) y \(\overline{A\cap B}=\overline{A}\cap \overline{B}\).
+    \item Prueba que si \(A\) es un subespacio de \(X\) y \(B\subset A\), entonces \(\text{Cl}_A \, B = (\text{Cl}_X B)\cap A\).
+    Aquí, \(\text{Cl}_A\) denota la clausura respecto a \(A\), tomado como espacio topológico.
+\end{enumerate}
+\end{problem}
+
 
 
 
