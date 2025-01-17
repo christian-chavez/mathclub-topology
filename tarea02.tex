@@ -1,0 +1,97 @@
+\documentclass[b5paper,10pt,twoside]{book}
+\input{./preamble.tex}
+
+\begin{document}
+\def\thetitle{Tarea 02}
+\def\fechaentrega{26 de enero de 2025}
+\input{title.tex}
+
+
+\section*{1.\enspace Continuidad }
+
+\begin{problem}
+Demuestra que 
+\begin{enumerate}[label=(\roman*)]
+    \item La composición de funciones continuas es continua. 
+    \item Si \(\mathcal{T}\) y \(\mathcal{U}\) son dos topologías sobre un conjunto \(X\), entonces 
+        \[1_X \colon (X,\mathcal{T}) \to (X,\mathcal{U})\]
+    es continua si y solamente si \(\mathcal{U}\subset \mathcal{T}\).
+\end{enumerate}
+\end{problem}
+
+\begin{problem}[Equivalencias de la definición de continuidad]
+Demuestra que una función \(f\colon X\to Y\)
+es continua si y solo si 
+\begin{enumerate}[label=(\roman*)]
+    \item para todo \(A\subset Y\) ocurre que \(\text{Cl}\,  f^{-1}(A)\subset f^{-1}(\text{Cl} \, A)\)
+    \item dada \(\mathcal{B}\)  una base para la topología de \(Y\), el conjunto \(f^{-1}(B)\) es abierto en \(X\) para todo \(B\in \mathcal{B}\).
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Considera el mapa 
+
+\[
+f : [0, 2] \to [0, 2] \quad:\quad f(x) = 
+\begin{cases} 
+x & \text{si } x \in [0, 1), \\ 
+3 - x & \text{si } x \in [1, 2].
+\end{cases}
+\]
+Demuestra que \(f\) no es continua.
+\end{problem}
+
+
+\section*{2.\enspace Homeomorfismos}
+
+
+\begin{problem}
+Sea \( f: X \to Y \) una biyección continua. Son equivalentes:
+\begin{enumerate}[label=(\roman*)]
+    \item \( f \) es un homeomorfismo.
+    \item \( f \) es abierta.
+    \item \( f \) es cerrada.
+\end{enumerate}
+
+
+\end{problem}
+
+\begin{problem}
+ Sea \( f : X \to Y \) un homeomorfismo. Entonces, para todo \( A \subset X \),
+\begin{enumerate}[label=(\roman*)]
+    \item \( f(\operatorname{Cl} A) = \operatorname{Cl}(f(A)) \)
+    \item \( f(\operatorname{Int} A) = \operatorname{Int}(f(A)) \)
+    \item \( f(\operatorname{Fr} A) = \operatorname{Fr}(f(A)) \)
+    \item \( A \) es un entorno de un punto \( x \in X \) si y solo si \( f(A) \) es un entorno del punto \( f(x) \)
+\end{enumerate}
+\end{problem}
+
+\section*{3.\enspace Convergencia y continuidad en espacios métricos}
+
+Sean \(  (X, d) \) y \( (Y, \rho) \)
+espacios métricos.
+
+\begin{problem}
+Sea \( f : X \to Y \).
+Demuestra que son equivalentes.
+\begin{enumerate}[label=(\roman*)]
+    \item \( f \) es continua sobre \( X \) (con la definición de espacios métricos)
+    \item Para cualquier abierto \( V \subset Y \), \( f^{-1}(V) \) es abierto en \( X \)
+\end{enumerate}
+
+\end{problem}
+
+\noindent
+\textbf{Definición.}
+Una función \( f : (X, d) \to (Y, \rho) \) es \textbf{lipschitz} si existe una constante \( L > 0 \) tal que 
+\[
+\rho(f(x), f(y)) \leq L \, d(x, y), \quad \forall x, y \in X.
+\]
+
+\begin{problem}
+Demuestra que si una función es Lipschitz, entonces es continua.
+\end{problem}
+
+
+\end{document}
+
