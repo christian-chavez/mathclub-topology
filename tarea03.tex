@@ -1,0 +1,296 @@
+\documentclass[b5paper,10pt,twoside]{book}
+\input{./preamble.tex}
+
+\begin{document}
+\def\thetitle{Examen final}
+\def\fechaentrega{31 de enero de 2025}
+\input{title.tex}
+
+Todos los problemas tienen el mismo valor.
+Se deben resolver exactamente \(10\) problemas
+y se debe seleccionar  al menos un problema de cada sección.
+
+
+% \section*{Parte 1}
+
+\subsection*{1.\enspace Espacios topológicos}
+
+
+\begin{problem}
+Sea \(X\) un conjunto.
+Sea \(\mathcal{T}\) un subconjunto del conjunto potencia de \(X\).
+Muestra que \(\mathcal{T}\) es una topología sobre \(X\) si, y solamente si,
+\begin{enumerate}[label=(\roman*)]
+\item \(\varnothing, X\in \mathcal{T}\),
+\item la intersección de cualquier familia arbitraria de conjuntos cerrados de \(X\) (respecto a \(\mathcal{T}\)) es un subconjunto cerrado de \(X\) (respecto a \(\mathcal{T}\)), y 
+\item la unión de cualquier familia finita de subconjuntos cerrados de \(X\) (respecto a \(\mathcal{T}\)) es un subconjunto cerrado de \(X\) (respecto a \(\mathcal{T}\)).
+\end{enumerate}
+\end{problem}
+
+
+\begin{problem}
+Considera 
+\[
+\Upsilon  = \left\{ 
+    A\subset \Z^+ \;\bigg|\; \forall m \in \Z^+, \forall n \in A :  m|n \implies m \in A
+ \right\}
+\]
+Muestra que \( \Omega = \left\{ O \subset \Z^+ \mid \Z^+\setminus O \in \Upsilon \right\}  \) es una topología sobre los enteros positivos.
+(La relación \(\mid\) se define así:  \(a\mid b\) ssi \(ak = n\) para algún   \(k\in \Z^+\).)
+\end{problem}
+
+\begin{problem}
+Considera  la colección 
+\[
+\mathcal{B} = \left\{ 
+    [a,b) \mid a,b\in\R
+ \right\}.
+\]
+\begin{enumerate}[label=(\roman*)]
+\item Prueba  que \(\mathcal{B}\) es una base para alguna topología en \(\R\). ¿Por que esa topología es única? Esta topología se llama la topología
+del límite inferior,
+y el espacio topológico asociado se llama 
+la línea de Sorgenfrey.
+
+
+\item Muestra que la  topología
+del límite inferior es más fina que la topología usual de \(\R\).
+
+\item Muestra que en esta topología, todo abierto también es cerrado.
+\end{enumerate}
+
+
+
+
+
+\end{problem}
+
+\subsection*{2.\enspace Espacios métricos}
+
+\begin{problem}
+Sea \(X=\mathcal{C}([0,1])\), el conjunto de todas las funciones continuas \([0,1]\to \R\).
+Muestra que la
+siguiente reglas de asignación 
+definen métricas sobre \(X\):
+\[
+(f,g) \mapsto \int_0^1 |f(x) - g(x)|\mathrm{d}x
+\quad\text{y}\quad
+(f,g) \mapsto \sup_{x\in[0,1]} |f(x) - g(x)|.
+\]
+
+\end{problem}
+ 
+
+\begin{problem}
+Un espacio normado es un par \((V, \Vert \cdot \Vert)\) donde \(V\) es un espacio vectorial y \(\Vert \cdot \Vert\) es una norma sobre \(V\).
+Muestra que un espacio normado se puede dotar de una topología de una manera canónica.
+\end{problem}
+
+
+\begin{problem}
+Sea $d$ una métrica en un conjunto $X$.
+Muestra que
+\begin{enumerate}[label=(\roman*)]
+\item la función ${\xi} : X \times X \to [0, +\infty)$ definida por 
+\[
+(x, y) \mapsto \frac{d(x, y)}{1 + d(x, y)}
+\]
+es una métrica en $X$
+
+\item \(\xi\) es \textbf{topológicamente equivalente} a \(d\).
+\end{enumerate}
+\end{problem}
+
+\subsection*{3.\enspace Posición de un punto respecto  a un conjunto}
+
+\begin{problem}
+Sea \(X\) un espacio topológico y \(A\subset X\).
+\begin{enumerate}[label=(\roman*)]
+\item Define la clausura de \(A\) en \(X\). ¿Por qué \(\overline{A}\) es cerrado?
+\item Define el interior  de \(A\) en \(X\).  ¿Por qué \({A}^\circ \) es abierto?
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Sea \(A\) un subconjunto de un espacio topológico.
+Demuestra que 
+\begin{enumerate}[label=(\roman*)]
+\item \(A\) es abierto si y solo si \(A = A^\circ\)
+\item \(A\) es cerrado si y solo si \(A = \overline{A}\)
+\item \(\overline{A} = A \cup A'\)
+\item \(\partial A = \overline{A}\cap \overline{X\setminus A}   \)
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Sea \((M,d)\) un espacio métrico,
+\(A\subset X\) y \(p\in M\).
+La distancia de \(p\) a \(A\)
+se define como 
+\[
+d(p,A) = \inf\left\{ d(p,a)\mid a\in A \right\}.
+\]
+Supón que \(A\) es cerrado.
+Muestra que \(d(p,A) = 0\) si, y solo si, \(p\in A\).
+\end{problem}
+
+
+\subsection*{4.\enspace Continuidad \& Homeomorfismos}
+
+\begin{problem}
+Sean \(X\) y \(Y\) espacios topológicos, y 
+sea \(\mathcal{B}\)  una base para la topología de \(Y\).
+Considera una función \(f\colon X\to Y\).
+Demuestra que \(f\)
+es continua si y solo si \(f^{-1}(B)\) es abierto en \(X\) para todo \(B\in \mathcal{B}\).
+\end{problem}
+
+
+\begin{problem}
+Sea $X = \{a, b, c, d\}$ dotado de la topología
+\[
+\mathcal{T} = \{\varnothing, X, \{a\}, \{b\}, \{a, c\}, \{a, b\}, \{a, b, c\}\}.
+\]
+Define una función continua \(X\xrightarrow{\varphi} X\).
+\end{problem}
+
+
+\begin{problem}
+Sea \(X\) un conjunto y 
+\((Y,\mathcal{T}_Y)\) un espacio topológico.
+Toma una función \(f\colon X\to Y\).
+Demuestra que 
+\[
+\mathcal{T}_X = \left\{ 
+    f^{-1}(O) \mid O\in \mathcal{T}_Y
+ \right\}
+\]
+es una topología sobre \(X\).
+Si \(X\) se dota de esta topología,
+¿por qué \(f\) es continua?
+\end{problem}
+
+
+
+
+% \section*{Parte 2}
+
+
+
+
+\subsection*{5.\enspace Propiedades Topológicas }
+
+\begin{problem}
+Sea \(X\)  un espacio topológico.
+\begin{enumerate}[label=(\roman*)]
+\item Define densidad respecto al espacio y respecto a un super conjunto (\(B\) es super conjunto de \(A\) si \(B\) contiene a \(A\), i.e. \(B\supset A\)).
+\item Sea   \(D\subset X\). Muestra que \(\overline{D} = X\) si, y solamente si, \(D\) interseca a todo abierto no vacío de \(X\).
+\end{enumerate}
+
+
+
+\end{problem}
+
+\begin{problem}
+Sea \(f\colon X\to Y\)
+un homeomorfismo.
+Recuerda que una propiedad topológica es aquella que se puede enunciar en términos de 
+conjuntos abiertos.
+Una invariante topológica 
+es una propiedad que se preserva bajo homeomorfismos.
+Demuestra que 
+\begin{enumerate}[label=(\roman*)]
+\item  \(X\) es Hausdorff si y solamente si  \(Y\) lo es
+\item  \(X\) es conexo si y solamente si  \(Y\) lo es
+\item  \(X\) es conexo por caminos si y solamente si  \(Y\) lo es
+\item  \(X\) es compacto si y solamente si  \(Y\) lo es
+\end{enumerate}
+\end{problem}
+
+\pagebreak
+
+\begin{problem}\hfill
+\begin{enumerate}[label=(\roman*)]
+\item Define  el segundo  axioma de numerabilidad  {\scshape anii}.
+\item Define segundo  axioma de separación \(\mathbf{T}_2\)
+\item Prueba que un espacio métrico es  Hausdorff
+\item Prueba que si un espacio métrico es segundo contable, entonces es separable. (Recuerda: un espacio topológico es separable si contiene un subconjunto que es denso en todas partes y que es contable.)
+\end{enumerate}
+
+\end{problem}
+
+
+\subsection*{6.\enspace Construcciones Topológicas }
+
+\begin{problem}
+Sea \((X_\lambda, \mathcal{T}_\Lambda)_{\lambda\in\Lambda}\)
+una familia finita de espacios topológicos.
+\begin{enumerate}[label=(\roman*)]
+\item Define 
+la topología producto sobre \(\prod\limits_{\lambda\in\Lambda} X_\lambda\).
+
+\item Define las proyecciones canónicas y muestra que son continuas respecto a la topología producto. ¿Qué significa que la topología producto sea la más gruesa (= débil) para la cual las proyecciones canónicas son continuas?
+\end{enumerate}
+
+\end{problem}
+
+ 
+\begin{problem}
+Sea \(X\times Y\) dotado de la topología 
+producto.
+\begin{enumerate}[label=(\roman*)]
+\item Describe los entornos  de un punto  \(p\in X\times Y\).
+\item Demuestra que si \(X\) y \(Y\) son Hausdorff, \(X\times Y\) también
+\end{enumerate}
+
+\end{problem}
+
+\begin{problem}\hfill\null
+\begin{enumerate}[label=(\roman*)]
+\item Define qué es una relación de equivalencia.
+\item Muestra que una relación de equivalencia induce una partición de manera canónica y vice versa.
+% \item Muestra que una partición induce una relación de equivalencia de manera canónica,
+\item El conjunto cociente de un conjunto \(X\) por una relación de equivalencia \(\sim\) (sobre \(X\)) se denota \(X/\!\!\sim\). Da la definición precisa de \(X/\!\!\sim\).
+\item Define la proyección canónica \(\pi\colon X\to X/\!\!\sim\)
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Sea \((X,\mathcal{T})\) 
+un espacio topológico
+y \(\sim\) una relación 
+de equivalencia sobre
+\(X\).
+Demuestra 
+que la colección
+\[
+\mathcal{Q} = \left\{ 
+    A\subset X/\!\!\sim \;\bigg|\; \pi^{-1}(A)\in  \mathcal{T}
+ \right\}
+\]
+es una topología
+en \(X/\!\!\sim\).
+\end{problem}
+
+\pagebreak
+
+\begin{problem}
+El toro topológico se define como el espacio  producto   \(S^1\times S^1\).
+
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[width=0.85\textwidth]{plane-to-torus.png}
+    % \caption{El t}%\label{fig:}
+\end{figure}
+
+Sabemos que 
+\[
+S^1\times S^1 \cong I^2 / [(0,t)\sim(1,t),\; (t,0)\sim (t,1)].
+\]
+Describe explícitamente \(\sim\) y la partición que ella genera.
+Aquí \(I\) denota el 
+intervalo unitario \([0,1]\).
+\end{problem}
+
+\end{document}
+
