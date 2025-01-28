@@ -65,13 +65,13 @@ del límite inferior es más fina que la topología usual de \(\R\).
 
 \end{problem}
 
-\subsection*{2.\enspace }
+\subsection*{2.\enspace Espacios Métricos}
 \addcontentsline{toc}{section}{2. Espacios Métricos}
 
 
 \begin{problem}
 Sea \(X=\mathcal{C}([0,1])\), el conjunto de todas las funciones continuas \([0,1]\to \R\).
-Muestra que la
+Muestra que las
 siguiente reglas de asignación 
 definen métricas sobre \(X\):
 \[
@@ -91,7 +91,7 @@ Muestra que un espacio normado se puede dotar de una topología de una manera ca
 
 \begin{problem}
 Sea $d$ una métrica en un conjunto $X$.
-Muestra que
+Demuestra que
 \begin{enumerate}[label=(\roman*)]
 \item la función ${\xi} : X \times X \to [0, +\infty)$ definida por 
 \[
@@ -122,7 +122,7 @@ Demuestra que
 \item \(A\) es abierto si y solo si \(A = A^\circ\)
 \item \(A\) es cerrado si y solo si \(A = \overline{A}\)
 \item \(\overline{A} = A \cup A'\)
-\item \(\partial A = \overline{A}\cap \overline{X\setminus A}   \)
+\item \(\partial A = \overline{A}\,\setminus A^\circ \)
 \end{enumerate}
 \end{problem}
 
@@ -135,7 +135,7 @@ se define como
 d(p,A) = \inf\left\{ d(p,a)\mid a\in A \right\}.
 \]
 Supón que \(A\) es cerrado.
-Muestra que \(d(p,A) = 0\) si, y solo si, \(p\in A\).
+Prueba que \(d(p,A) = 0\) si, y solo si, \(p\in A\).
 \end{problem}
 
 
@@ -158,6 +158,7 @@ Sea $X = \{a, b, c, d\}$ dotado de la topología
 \mathcal{T} = \{\varnothing, X, \{a\}, \{b\}, \{a, c\}, \{a, b\}, \{a, b, c\}\}.
 \]
 Define una función continua \(X\xrightarrow{\varphi} X\).
+Define un homeomorfismo \(X\xrightarrow{\phi} X\) distinto de la identidad.
 \end{problem}
 
 
@@ -209,10 +210,10 @@ Una invariante topológica
 es una propiedad que se preserva bajo homeomorfismos.
 Demuestra que 
 \begin{enumerate}[label=(\roman*)]
-\item  \(X\) es Hausdorff si y solamente si  \(Y\) lo es
-\item  \(X\) es conexo si y solamente si  \(Y\) lo es
-\item  \(X\) es conexo por caminos si y solamente si  \(Y\) lo es
-\item  \(X\) es compacto si y solamente si  \(Y\) lo es
+\item  \(X\) es Hausdorff si y solamente si  \(Y\) lo es,
+\item  \(X\) es conexo si y solamente si  \(Y\) lo es,
+\item  \(X\) es conexo por caminos si y solamente si  \(Y\) lo es,
+\item  \(X\) es compacto si y solamente si  \(Y\) lo es,
 \end{enumerate}
 \end{problem}
 
@@ -221,8 +222,8 @@ Demuestra que
 \begin{problem}\hfill
 \begin{enumerate}[label=(\roman*)]
 \item Define  el segundo  axioma de numerabilidad  {\scshape anii}.
-\item Define segundo  axioma de separación \(\mathbf{T}_2\)
-\item Prueba que un espacio métrico es  Hausdorff
+\item Define segundo  axioma de separación \(\mathbf{T}_2\).
+\item Prueba que un espacio métrico es  Hausdorff.
 \item Prueba que si un espacio métrico es segundo contable, entonces es separable. (Recuerda: un espacio topológico es separable si contiene un subconjunto que es denso en todas partes y que es contable.)
 \end{enumerate}
 
@@ -251,7 +252,7 @@ Sea \(X\times Y\) dotado de la topología
 producto.
 \begin{enumerate}[label=(\roman*)]
 \item Describe los entornos  de un punto  \(p\in X\times Y\).
-\item Demuestra que si \(X\) y \(Y\) son Hausdorff, \(X\times Y\) también
+\item Demuestra que si \(X\) y \(Y\) son Hausdorff, \(X\times Y\) también.
 \end{enumerate}
 
 \end{problem}
@@ -288,17 +289,17 @@ en \(X/\!\!\sim\).
 
 \begin{problem}
 El toro topológico se define como el espacio  producto   \(S^1\times S^1\).
-
+Sabemos que 
+\[
+S^1\times S^1 \cong I^2 / [(0,t)\sim(1,t),\; (t,0)\sim (t,1)].
+\]
 \begin{figure}[!htb]
     \centering
     \includegraphics[width=0.85\textwidth]{plane-to-torus.png}
     % \caption{El t}%\label{fig:}
 \end{figure}
 
-Sabemos que 
-\[
-S^1\times S^1 \cong I^2 / [(0,t)\sim(1,t),\; (t,0)\sim (t,1)].
-\]
+
 Describe explícitamente \(\sim\) y la partición que ella genera.
 Aquí \(I\) denota el 
 intervalo unitario \([0,1]\).
